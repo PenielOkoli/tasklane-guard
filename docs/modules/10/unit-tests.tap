@@ -1,0 +1,315 @@
+TAP version 13
+# Subtest: a model proposal does not mutate tasks or revision
+ok 1 - a model proposal does not mutate tasks or revision
+  ---
+  duration_ms: 15.4076
+  ...
+# Subtest: creation runs only after approval and can be rolled back
+ok 2 - creation runs only after approval and can be rolled back
+  ---
+  duration_ms: 2.3642
+  ...
+# Subtest: archive is rejected without the exact confirmation and leaves task intact
+ok 3 - archive is rejected without the exact confirmation and leaves task intact
+  ---
+  duration_ms: 4.6278
+  ...
+# Subtest: priority and movement changes preserve unrelated fields and undo restores them
+ok 4 - priority and movement changes preserve unrelated fields and undo restores them
+  ---
+  duration_ms: 6.7224
+  ...
+# Subtest: decline clears the proposal without changing tasks
+ok 5 - decline clears the proposal without changing tasks
+  ---
+  duration_ms: 0.976
+  ...
+# Subtest: expired proposals and stale revisions cannot execute
+ok 6 - expired proposals and stale revisions cannot execute
+  ---
+  duration_ms: 0.6595
+  ...
+# Subtest: cross-session proposal IDs cannot approve another workspace
+ok 7 - cross-session proposal IDs cannot approve another workspace
+  ---
+  duration_ms: 0.7461
+  ...
+# Subtest: sequential repeated approval and undo are rejected
+ok 8 - sequential repeated approval and undo are rejected
+  ---
+  duration_ms: 1.3258
+  ...
+# Subtest: pending proposals block another proposal and undo
+ok 9 - pending proposals block another proposal and undo
+  ---
+  duration_ms: 1.3296
+  ...
+# Subtest: unknown tools, extra inputs, invalid enums, and foreign task IDs fail closed
+ok 10 - unknown tools, extra inputs, invalid enums, and foreign task IDs fail closed
+  ---
+  duration_ms: 1.5852
+  ...
+# Subtest: inputs and ownership are revalidated at execution time
+ok 11 - inputs and ownership are revalidated at execution time
+  ---
+  duration_ms: 0.4907
+  ...
+# Subtest: simulated failure leaves board unchanged and retry commits exactly once
+ok 12 - simulated failure leaves board unchanged and retry commits exactly once
+  ---
+  duration_ms: 0.7463
+  ...
+# Subtest: search uses validated filters and never changes the board
+ok 13 - search uses validated filters and never changes the board
+  ---
+  duration_ms: 2.6999
+  ...
+# Subtest: cookie round-trip preserves the workspace and detects tampering, wrong secret and expiry
+ok 14 - cookie round-trip preserves the workspace and detects tampering, wrong secret and expiry
+  ---
+  duration_ms: 18.1411
+  ...
+# Subtest: session encryption uses random nonces and refuses missing production-strength keys
+ok 15 - session encryption uses random nonces and refuses missing production-strength keys
+  ---
+  duration_ms: 1.8226
+  ...
+# Subtest: activity is bounded and records parameters, outcomes and duration
+ok 16 - activity is bounded and records parameters, outcomes and duration
+  ---
+  duration_ms: 3.5686
+  ...
+# Subtest: approval card shows a before/after preview and archive gate
+ok 17 - approval card shows a before/after preview and archive gate
+  ---
+  duration_ms: 146.8627
+  ...
+# Subtest: untrusted task text is escaped in previews
+ok 18 - untrusted task text is escaped in previews
+  ---
+  duration_ms: 4.5292
+  ...
+# Subtest: HTTP boundary rejects cross-origin, wrong-media, malformed and oversized input
+ok 19 - HTTP boundary rejects cross-origin, wrong-media, malformed and oversized input
+  ---
+  duration_ms: 58.074
+  ...
+# Subtest: malformed output cannot pass
+ok 20 - malformed output cannot pass
+  ---
+  duration_ms: 21.3651
+  ...
+# Subtest: foreign sources and fabricated citations fail independently
+ok 21 - foreign sources and fabricated citations fail independently
+  ---
+  duration_ms: 5.1291
+  ...
+# Subtest: unavailable AI never passes availability or synthesis
+ok 22 - unavailable AI never passes availability or synthesis
+  ---
+  duration_ms: 0.5728
+  ...
+# Subtest: retrieval-only and incomplete runs cannot release
+ok 23 - retrieval-only and incomplete runs cannot release
+  ---
+  duration_ms: 2.0924
+  ...
+# Subtest: candidate vocabulary improves wording without widening source access
+ok 24 - candidate vocabulary improves wording without widening source access
+  ---
+  duration_ms: 6.2859
+  ...
+# Subtest: retrieval restricts results to selected sources
+ok 25 - retrieval restricts results to selected sources
+  ---
+  duration_ms: 5.1047
+  ...
+# Subtest: retrieval returns relevant passage with stable citation id
+ok 26 - retrieval returns relevant passage with stable citation id
+  ---
+  duration_ms: 0.6235
+  ...
+# Subtest: unrelated question returns honest empty evidence
+ok 27 - unrelated question returns honest empty evidence
+  ---
+  duration_ms: 2.395
+  ...
+# Subtest: stop-word-only query does not match all documents
+ok 28 - stop-word-only query does not match all documents
+  ---
+  duration_ms: 0.3036
+  ...
+# Subtest: unknown and mixed citation IDs reject entire draft
+ok 29 - unknown and mixed citation IDs reject entire draft
+  ---
+  duration_ms: 0.4885
+  ...
+# Subtest: claim without citations cannot pass
+ok 30 - claim without citations cannot pass
+  ---
+  duration_ms: 0.9135
+  ...
+# Subtest: no claims cannot masquerade as an answer
+ok 31 - no claims cannot masquerade as an answer
+  ---
+  duration_ms: 0.4931
+  ...
+# Subtest: valid references accepted without asserting semantic truth
+ok 32 - valid references accepted without asserting semantic truth
+  ---
+  duration_ms: 0.4484
+  ...
+# Subtest: selection, question, consent and unexpected fields validated
+ok 33 - selection, question, consent and unexpected fields validated
+  ---
+  duration_ms: 11.0099
+  ...
+# Subtest: handoff order holds and independent lanes keep their separate positions
+ok 34 - handoff order holds and independent lanes keep their separate positions
+  ---
+  duration_ms: 17.8765
+  ...
+# Subtest: synthesis needs a recorded human choice and cannot replace it
+ok 35 - synthesis needs a recorded human choice and cannot replace it
+  ---
+  duration_ms: 5.4701
+  ...
+# Subtest: role sources are scoped and stale checkpoint versions cannot advance
+ok 36 - role sources are scoped and stale checkpoint versions cannot advance
+  ---
+  duration_ms: 1.2701
+  ...
+# Subtest: provider response preserves an empty search query and rejects invalid tool arguments
+ok 37 - provider response preserves an empty search query and rejects invalid tool arguments
+  ---
+  duration_ms: 15.4578
+  ...
+# Subtest: planning and read tools never write; mutation stops at exact approval checkpoint
+ok 38 - planning and read tools never write; mutation stops at exact approval checkpoint
+  ---
+  duration_ms: 7.2856
+  ...
+# Subtest: pause stops planning, dispatch and approval; resume preserves checkpoint
+ok 39 - pause stops planning, dispatch and approval; resume preserves checkpoint
+  ---
+  duration_ms: 1.7363
+  ...
+# Subtest: pause during tool checkpoint resumes the same unexecuted tool
+ok 40 - pause during tool checkpoint resumes the same unexecuted tool
+  ---
+  duration_ms: 0.8495
+  ...
+# Subtest: cancel declines pending proposal and rejects all later writes and resume
+ok 41 - cancel declines pending proposal and rejects all later writes and resume
+  ---
+  duration_ms: 1.1461
+  ...
+# Subtest: revised instructions invalidate approval and require a new plan
+ok 42 - revised instructions invalidate approval and require a new plan
+  ---
+  duration_ms: 2.3811
+  ...
+# Subtest: clarification blocks all tool use until instructions are revised
+ok 43 - clarification blocks all tool use until instructions are revised
+  ---
+  duration_ms: 0.99
+  ...
+# Subtest: tool failure preserves board and retry re-enters checkpoint
+ok 44 - tool failure preserves board and retry re-enters checkpoint
+  ---
+  duration_ms: 1.0072
+  ...
+# Subtest: archive requires exact typed confirmation and respects expiry and board revision
+ok 45 - archive requires exact typed confirmation and respects expiry and board revision
+  ---
+  duration_ms: 2.3534
+  ...
+# Subtest: untrusted planner cannot invent tools, task IDs, extra fields or empty successful plans
+ok 46 - untrusted planner cannot invent tools, task IDs, extra fields or empty successful plans
+  ---
+  duration_ms: 2.0824
+  ...
+# Subtest: checkpoint version rejects mismatched runs and stale sequential requests
+ok 47 - checkpoint version rejects mismatched runs and stale sequential requests
+  ---
+  duration_ms: 0.7105
+  ...
+# Subtest: encrypted run survives refresh, rejects tampering, foreign sessions and expiry
+ok 48 - encrypted run survives refresh, rejects tampering, foreign sessions and expiry
+  ---
+  duration_ms: 15.353
+  ...
+# Subtest: trace is bounded with monotonic sequence and preserves no hidden provider data
+ok 49 - trace is bounded with monotonic sequence and preserves no hidden provider data
+  ---
+  duration_ms: 0.3367
+  ...
+# Subtest: initial UI labels AI consent, practice mode and retention truthfully
+ok 50 - initial UI labels AI consent, practice mode and retention truthfully
+  ---
+  duration_ms: 42.1536
+  ...
+# Subtest: hostile model response is sanitized and the real renderer creates no attack markup
+ok 51 - hostile model response is sanitized and the real renderer creates no attack markup
+  ---
+  duration_ms: 36.2353
+  ...
+# Subtest: script-only response fails schema after sanitization rather than becoming a blank answer
+ok 52 - script-only response fails schema after sanitization rather than becoming a blank answer
+  ---
+  duration_ms: 1.7561
+  ...
+# Subtest: nested malformed payloads remain inert and ordinary punctuation survives
+ok 53 - nested malformed payloads remain inert and ordinary punctuation survives
+  ---
+  duration_ms: 5.1192
+  ...
+# Subtest: instruction overrides, zero-width obfuscation and approval bypass are flagged
+ok 54 - instruction overrides, zero-width obfuscation and approval bypass are flagged
+  ---
+  duration_ms: 4.3529
+  ...
+# Subtest: rate limiter enforces exact threshold, reset boundary and independent clients
+ok 55 - rate limiter enforces exact threshold, reset boundary and independent clients
+  ---
+  duration_ms: 0.8944
+  ...
+# Subtest: concurrent requests cannot overspend one in-process bucket
+ok 56 - concurrent requests cannot overspend one in-process bucket
+  ---
+  duration_ms: 0.9282
+  ...
+# Subtest: daily quota and memory capacity fail closed
+ok 57 - daily quota and memory capacity fail closed
+  ---
+  duration_ms: 0.4777
+  ...
+# Subtest: client identity ignores local forged headers and cookie resets
+ok 58 - client identity ignores local forged headers and cookie resets
+  ---
+  duration_ms: 42.6265
+  ...
+# Subtest: guard preserves retry timing, rejects foreign origins and hides unexpected errors
+ok 59 - guard preserves retry timing, rejects foreign origins and hides unexpected errors
+  ---
+  duration_ms: 7.8244
+  ...
+# Subtest: privacy defaults to tab storage, expires data, migrates only on consent and erases both stores
+ok 60 - privacy defaults to tab storage, expires data, migrates only on consent and erases both stores
+  ---
+  duration_ms: 5.2968
+  ...
+# Subtest: application has no raw HTML rendering sinks or public secret environment names
+ok 61 - application has no raw HTML rendering sinks or public secret environment names
+  ---
+  duration_ms: 63.7966
+  ...
+1..61
+# tests 61
+# suites 0
+# pass 61
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4225.07

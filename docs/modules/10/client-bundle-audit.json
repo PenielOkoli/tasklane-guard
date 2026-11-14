@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-14T14:10:56.018Z",
+  "filesScanned": 16,
+  "forbiddenMarkers": [
+    "GROQ_API_KEY",
+    "SESSION_SECRET",
+    "TASKLANE_PRIVATE_BUILD_CANARY"
+  ],
+  "passed": true,
+  "hits": []
+}
